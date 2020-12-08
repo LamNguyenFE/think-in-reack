@@ -70,6 +70,17 @@ ProductTable needs to filter the product list based on state and SearchBar needs
 The common owner component is FilterableProductTable.
 It conceptually makes sense for the filter text and checked value to live in FilterableProductTable
 
+### Step 5: Add Inverse Data Flow
+
+-support data flowing the other way: the form components deep in the hierarchy need to update the state in FilterableProductTable.
+-Let’s think about what we want to happen. We want to make sure that whenever the user changes the form, we update the state to reflect the user input. Since components should only update their own state, FilterableProductTable will pass callbacks to SearchBar that will fire whenever the state should be updated. We can use the onChange event on the inputs to be notified of it. The callbacks passed by FilterableProductTable will call setState(), and the app will be updated.
+
+##And That’s It. Done
+
+add useEffect for title, useRef to focus to input affer ender
+
+
+
 
 
 

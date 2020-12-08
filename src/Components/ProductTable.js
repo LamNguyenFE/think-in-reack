@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ProductCategoryRow from './ProductCategoryRow';
 import ProductRow from './ProductRow';
 
@@ -36,6 +36,8 @@ function ProductTable(props) {
         );
         lastCategory = product.category;
     });
+
+
 
     return (
         <table>
