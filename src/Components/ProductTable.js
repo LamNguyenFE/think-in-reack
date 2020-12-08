@@ -6,7 +6,19 @@ function ProductTable(props) {
     const rows = [];
     let lastCategory = null;
 
+    //recived 
+    const filterText = props.filterText;
+    const inStockOnly = props.inStockOnly;
+
     props.products.forEach((product) => {
+        //filter by name of product 
+        if (product.name.indexOf(filterText) === -1) {
+            return;
+        }
+        //filter by inStockOnly show or not
+        if (inStockOnly && !product.stocked) {
+            return;
+        }
 
         //just render Category one time
         if (product.category !== lastCategory) {

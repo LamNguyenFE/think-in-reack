@@ -8,6 +8,7 @@ const PRODUCTS = [
     { category: 'Clothes', price: '$199.99', stocked: true, name: 'HM 7' },
     { category: 'Clothes', price: '$199.99', stocked: true, name: 'HM 7' },
     { category: 'Clothes', price: '$199.99', stocked: true, name: 'HM 7' },
+    { category: 'Clothes', price: '$199.99', stocked: false, name: 'HM 7' },
 ];
 
 export default PRODUCTS
